@@ -14,6 +14,11 @@
 		A5975F7F27B5506800195A16 /* EuphoriaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5975F7E27B5506800195A16 /* EuphoriaTests.swift */; };
 		A5975F8927B5506800195A16 /* EuphoriaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5975F8827B5506800195A16 /* EuphoriaUITests.swift */; };
 		A5975F8B27B5506800195A16 /* EuphoriaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5975F8A27B5506800195A16 /* EuphoriaUITestsLaunchTests.swift */; };
+		A5975FA027B556A600195A16 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5975F9F27B556A600195A16 /* NetworkExtension.framework */; platformFilter = maccatalyst; };
+		A5975FA327B556A600195A16 /* AppProxyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5975FA227B556A600195A16 /* AppProxyProvider.swift */; };
+		A5975FA827B556A600195A16 /* Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A5975F9D27B556A600195A16 /* Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A5975FAE27B5573100195A16 /* NeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5975FAD27B5573100195A16 /* NeManager.swift */; };
+		A5975FAF27B5578F00195A16 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5975F9F27B556A600195A16 /* NetworkExtension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +36,28 @@
 			remoteGlobalIDString = A5975F6827B5506500195A16;
 			remoteInfo = Euphoria;
 		};
+		A5975FA627B556A600195A16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5975F6127B5506500195A16 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5975F9C27B556A600195A16;
+			remoteInfo = Extension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A5975FAC27B556A600195A16 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A5975FA827B556A600195A16 /* Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A5975F6927B5506500195A16 /* Euphoria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Euphoria.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +73,12 @@
 		A5975F8A27B5506800195A16 /* EuphoriaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EuphoriaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A5975F9727B5513400195A16 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A5975F9827B554A300195A16 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		A5975F9D27B556A600195A16 /* Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Extension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5975F9F27B556A600195A16 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		A5975FA227B556A600195A16 /* AppProxyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProxyProvider.swift; sourceTree = "<group>"; };
+		A5975FA427B556A600195A16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5975FA527B556A600195A16 /* Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Extension.entitlements; sourceTree = "<group>"; };
+		A5975FAD27B5573100195A16 /* NeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5975FAF27B5578F00195A16 /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +104,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A5975F9A27B556A600195A16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5975FA027B556A600195A16 /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +123,8 @@
 				A5975F6B27B5506500195A16 /* Euphoria */,
 				A5975F7D27B5506700195A16 /* EuphoriaTests */,
 				A5975F8727B5506800195A16 /* EuphoriaUITests */,
+				A5975FA127B556A600195A16 /* Extension */,
+				A5975F9E27B556A600195A16 /* Frameworks */,
 				A5975F6A27B5506500195A16 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +135,7 @@
 				A5975F6927B5506500195A16 /* Euphoria.app */,
 				A5975F7A27B5506700195A16 /* EuphoriaTests.xctest */,
 				A5975F8427B5506800195A16 /* EuphoriaUITests.xctest */,
+				A5975F9D27B556A600195A16 /* Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,6 +148,7 @@
 				A5975F7027B5506700195A16 /* Assets.xcassets */,
 				A5975F7527B5506700195A16 /* Euphoria.entitlements */,
 				A5975F7227B5506700195A16 /* Preview Content */,
+				A5975FAD27B5573100195A16 /* NeManager.swift */,
 			);
 			path = Euphoria;
 			sourceTree = "<group>";
@@ -133,6 +178,24 @@
 			path = EuphoriaUITests;
 			sourceTree = "<group>";
 		};
+		A5975F9E27B556A600195A16 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5975F9F27B556A600195A16 /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5975FA127B556A600195A16 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A5975FA227B556A600195A16 /* AppProxyProvider.swift */,
+				A5975FA427B556A600195A16 /* Info.plist */,
+				A5975FA527B556A600195A16 /* Extension.entitlements */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,10 +206,12 @@
 				A5975F6527B5506500195A16 /* Sources */,
 				A5975F6627B5506500195A16 /* Frameworks */,
 				A5975F6727B5506500195A16 /* Resources */,
+				A5975FAC27B556A600195A16 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A5975FA727B556A600195A16 /* PBXTargetDependency */,
 			);
 			name = Euphoria;
 			productName = Euphoria;
@@ -189,6 +254,23 @@
 			productReference = A5975F8427B5506800195A16 /* EuphoriaUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		A5975F9C27B556A600195A16 /* Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5975FA927B556A600195A16 /* Build configuration list for PBXNativeTarget "Extension" */;
+			buildPhases = (
+				A5975F9927B556A600195A16 /* Sources */,
+				A5975F9A27B556A600195A16 /* Frameworks */,
+				A5975F9B27B556A600195A16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Extension;
+			productName = Extension;
+			productReference = A5975F9D27B556A600195A16 /* Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -210,6 +292,9 @@
 						CreatedOnToolsVersion = 13.2.1;
 						TestTargetID = A5975F6827B5506500195A16;
 					};
+					A5975F9C27B556A600195A16 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
 				};
 			};
 			buildConfigurationList = A5975F6427B5506500195A16 /* Build configuration list for PBXProject "Euphoria" */;
@@ -228,6 +313,7 @@
 				A5975F6827B5506500195A16 /* Euphoria */,
 				A5975F7927B5506700195A16 /* EuphoriaTests */,
 				A5975F8327B5506800195A16 /* EuphoriaUITests */,
+				A5975F9C27B556A600195A16 /* Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -256,6 +342,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A5975F9B27B556A600195A16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -265,6 +358,7 @@
 			files = (
 				A5975F6F27B5506500195A16 /* ContentView.swift in Sources */,
 				A5975F6D27B5506500195A16 /* EuphoriaApp.swift in Sources */,
+				A5975FAE27B5573100195A16 /* NeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +379,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A5975F9927B556A600195A16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5975FA327B556A600195A16 /* AppProxyProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -297,6 +399,11 @@
 			isa = PBXTargetDependency;
 			target = A5975F6827B5506500195A16 /* Euphoria */;
 			targetProxy = A5975F8527B5506800195A16 /* PBXContainerItemProxy */;
+		};
+		A5975FA727B556A600195A16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5975F9C27B556A600195A16 /* Extension */;
+			targetProxy = A5975FA627B556A600195A16 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -419,6 +526,7 @@
 		A5975F8F27B5506800195A16 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Euphoria/Euphoria.entitlements;
@@ -446,6 +554,7 @@
 		A5975F9027B5506800195A16 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Euphoria/Euphoria.entitlements;
@@ -542,6 +651,60 @@
 			};
 			name = Release;
 		};
+		A5975FAA27B556A600195A16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Extension/Extension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35YN8YDCG3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Extension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Extension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.branliang.Euphoria.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A5975FAB27B556A600195A16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Extension/Extension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35YN8YDCG3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Extension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Extension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.branliang.Euphoria.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -577,6 +740,15 @@
 			buildConfigurations = (
 				A5975F9527B5506800195A16 /* Debug */,
 				A5975F9627B5506800195A16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5975FA927B556A600195A16 /* Build configuration list for PBXNativeTarget "Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5975FAA27B556A600195A16 /* Debug */,
+				A5975FAB27B556A600195A16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
