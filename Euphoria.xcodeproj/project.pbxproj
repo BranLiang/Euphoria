@@ -45,6 +45,8 @@
 		A5975F8427B5506800195A16 /* EuphoriaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EuphoriaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5975F8827B5506800195A16 /* EuphoriaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EuphoriaUITests.swift; sourceTree = "<group>"; };
 		A5975F8A27B5506800195A16 /* EuphoriaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EuphoriaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A5975F9727B5513400195A16 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A5975F9827B554A300195A16 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,8 @@
 		A5975F6027B5506500195A16 = {
 			isa = PBXGroup;
 			children = (
+				A5975F9827B554A300195A16 /* LICENSE */,
+				A5975F9727B5513400195A16 /* README.md */,
 				A5975F6B27B5506500195A16 /* Euphoria */,
 				A5975F7D27B5506700195A16 /* EuphoriaTests */,
 				A5975F8727B5506800195A16 /* EuphoriaUITests */,
